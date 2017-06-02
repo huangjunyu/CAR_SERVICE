@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'//增加这一句
+android {
+    compileSdkVersion 25
+    buildToolsVersion "24.0.3"
+    dataBinding {
+        enabled = true
+    }
+    defaultConfig {
+        applicationId "com.example.administrator.carservice"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    //使用butterknife需要增加这个，共4个
+    apt 'com.jakewharton:butterknife-compiler:+'//使用butterknife需要增加这个，共4个
+
+    compile 'io.reactivex:rxjava:+'
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:design:25.0.1'
+    compile 'com.jakewharton:butterknife:+'
+    compile 'com.lzy.widget:imagepicker:0.3.2'
+    compile 'com.android.support:support-v4:25.0.1'
+    compile 'com.squareup.okhttp3:okhttp:+'
+    compile 'com.squareup.retrofit2:retrofit:+'
+    compile 'com.squareup.retrofit2:converter-gson:+'
+    compile 'com.squareup.retrofit2:adapter-rxjava:+'
+    compile 'com.github.bumptech.glide:glide:+'
+    compile 'io.reactivex:rxjava:+'
+    compile 'io.reactivex:rxandroid:+'
+    compile 'com.jakewharton.rxbinding:rxbinding:+'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:+'
+}

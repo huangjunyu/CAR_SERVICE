@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="news_type">
+        <item>头条</item>
+        <item>新闻</item>
+        <item>财经</item>
+        <item>体育</item>
+        <item>娱乐</item>
+        <item>军事</item>
+        <item>教育</item>
+        <item>科技</item>
+        <item>NBA</item>
+        <item>股票</item>
+        <item>星座</item>
+        <item>女性</item>
+        <item>健康</item>
+        <item>育儿</item>
+    </string-array>
+</resources>
